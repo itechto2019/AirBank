@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A339C3C4-C767-4BA7-BD96-06F26DD7A3D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AirBank.My.MyApplication</StartupObject>
+    <RootNamespace>AirBank</RootNamespace>
+    <AssemblyName>AirBank</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AirBank.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AirBank.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Database_module.vbs" />
+    <Compile Include="Forms\AboutUs.Designer.vb">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutUs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Account_Checker.Designer.vb">
+      <DependentUpon>Account_Checker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Account_Checker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddAccount.Designer.vb">
+      <DependentUpon>AddAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\index.Designer.vb">
+      <DependentUpon>index.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Log.Designer.vb">
+      <DependentUpon>Log.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Log.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member Forms\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member Forms\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member Forms\Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member Forms\Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateData.Designer.vb">
+      <DependentUpon>UpdateData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\userType.Designer.vb">
+      <DependentUpon>userType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\userType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="myreport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyReports.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Process Forms\ChangePasscode.Designer.vb">
+      <DependentUpon>ChangePasscode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process Forms\ChangePasscode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process Forms\DepositSuccessful.Designer.vb">
+      <DependentUpon>DepositSuccessful.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process Forms\DepositSuccessful.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process Forms\P_Deposit.Designer.vb">
+      <DependentUpon>P_Deposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process Forms\P_Deposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process Forms\P_Withdrawal.Designer.vb">
+      <DependentUpon>P_Withdrawal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process Forms\P_Withdrawal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Process Forms\WithdrawalSuccessful.Designer.vb">
+      <DependentUpon>WithdrawalSuccessful.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Process Forms\WithdrawalSuccessful.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutUs.resx">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Account_Checker.resx">
+      <DependentUpon>Account_Checker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddAccount.resx">
+      <DependentUpon>AddAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\index.resx">
+      <DependentUpon>index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Log.resx">
+      <DependentUpon>Log.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member Forms\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member Forms\Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateData.resx">
+      <DependentUpon>UpdateData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\userType.resx">
+      <DependentUpon>userType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>myreport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MyReports.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process Forms\ChangePasscode.resx">
+      <DependentUpon>ChangePasscode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process Forms\DepositSuccessful.resx">
+      <DependentUpon>DepositSuccessful.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process Forms\P_Deposit.resx">
+      <DependentUpon>P_Deposit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process Forms\P_Withdrawal.resx">
+      <DependentUpon>P_Withdrawal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Process Forms\WithdrawalSuccessful.resx">
+      <DependentUpon>WithdrawalSuccessful.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eighty-Eight.otf" />
+    <None Include="Resources\icons8_search_32px.png" />
+    <None Include="Resources\icons8_verified_account_32px.png" />
+    <None Include="Resources\icons8_withdrawal_32px.png" />
+    <None Include="Resources\icons8_deposit_32px.png" />
+    <None Include="Resources\icons8_shutdown_32px.png" />
+    <None Include="Resources\icons8_close_window_48px.png" />
+    <None Include="Resources\icons8_money_bag_96px.png" />
+    <None Include="Resources\icons8_online_money_transfer_96px.png" />
+    <None Include="Resources\icons8_today_96px.png" />
+    <None Include="Resources\icons8_withdrawal_96px.png" />
+    <None Include="Resources\icons8_deposit_96px.png" />
+    <None Include="Resources\icons8_asterisk_96px.png" />
+    <None Include="Resources\icons8_ok_48px.png" />
+    <None Include="Resources\icons8_ok_32px.png" />
+    <None Include="Resources\icons8_save_32px_1.png" />
+    <None Include="Resources\icons8_update_32px.png" />
+    <None Include="Resources\icons8_unavailable_32px.png" />
+    <None Include="Resources\icons8_deposit_96px1.png" />
+    <None Include="Resources\icons8_clear_symbol_32px.png" />
+    <None Include="Resources\withdrawal.png" />
+    <None Include="Resources\steps.png" />
+    <None Include="Resources\Deposit.png" />
+    <None Include="Resources\icons8_cashbook_48px.png" />
+    <None Include="Resources\icons8_edit_property_48px.png" />
+    <None Include="Resources\icons8_time_machine_32px.png" />
+    <None Include="Resources\icons8_plus_48px.png" />
+    <None Include="Resources\icons8_plus_48px1.png" />
+    <None Include="Resources\icons8_plus_32px.png" />
+    <None Include="Resources\icons8_close_window_48px1.png" />
+    <None Include="Resources\icons8_close_window_96px.png" />
+    <None Include="Resources\icons8_museum_48px1.png" />
+    <None Include="Resources\icons8_museum_48px2.png" />
+    <None Include="Resources\icons8_stack_of_money_96px_1.png" />
+    <None Include="Resources\withdraw.jpg" />
+    <None Include="Resources\icons8_administrative_tools_32px_1.png" />
+    <None Include="Resources\icons8_user_48px.png" />
+    <None Include="Resources\icons8_user_32px.png" />
+    <None Include="Resources\icons8_bank_building_48px.png" />
+    <None Include="Resources\icons8_circled_right_32px.png" />
+    <None Include="Resources\icons8_ok_32px1.png" />
+    <None Include="Resources\icons8_ok_48px1.png" />
+    <None Include="Resources\icons8_agreement.ico" />
+    <None Include="Resources\delete_all.png" />
+    <Content Include="src\images\icons8_dashboard_48px.png" />
+    <None Include="Resources\icons8_bank_48px_1.png" />
+    <None Include="Resources\icons8_museum_48px.png" />
+    <Content Include="src\images\adminIcon.png" />
+    <Content Include="src\images\money.png" />
+    <Content Include="src\images\bankHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SetupKernel">
+      <Guid>{9795D310-2B39-4E89-B714-C363293FCC6C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
